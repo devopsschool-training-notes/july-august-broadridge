@@ -423,13 +423,475 @@ or
 set PATH=%PATH%;c:/tools/maven/bin/
 
 Step 5 - mvn --version
+=========================================================
+How to download Packages from Nexus using Maven?
+====================================================
+
+
+Maven --> Pom.xml (Dependencies) --> LocalRepo(C:\Users\Rajesh Kumar\.m2\repository)
+					IF there - Load in JVM 
+					IF not there - Go to Central https://repo.maven.apache.org/maven2/
+					and Download back to Local and Use it.
+
+
+How can i tell Maven to read dependncies from nexus than Central?
+
+=====================================================
+Setting.xml Modify Mirror element.
+===============================================================
+
+Rajesh Kumar
+DevOps@RajeshKumar.xyz
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
 
 
 
 
+		Rajesh Kumar
+========================
+1 2 3 4 5 6 7 8 9 
+================================
+9: 30 AM IST - 6: 00 PM IST
+================================
+2 Break - 15 mins - Tea coffer - 11.30 / 4:00
+1 Break - 45mins-50mins = 1:OO - 
+=====================================
+Demo Env - Laptop + AWS Cloud
+Lab - Laptop + AWS Cloud
+
+Git  	1/2 Half
+& 
+Nexus	1/2 Half
+========================================================
+Quick Fact about requirement
+- Git - NO Pre
+- Nexus - Some Pre
+		Maven
+		Gradle
+		Docker
+=========================DEVOPS===============================
+What is Git?
+--------------------------
+	Code Repository
+	Version control system
+	Source Code Management System
+	For What????
+		Storing TEXT BASED Code
+	Not For Binary
+		Executable
+		Images
+		PDFs
+		Words
+		XLSs
+		-------------------------
+		NEXUS
+
+	Free
+	Open Source
+	Written By - Linus Tovarld
+
+	Platform Independent
+
+	===========================
+	GIT IS BASED ON DISTRIBUTED MODEL
+	===========================
+ 
+===================================
+
+Why we need Git?
+------------------------------
+	Coz We want to know
+		- When
+		- WHO 
+		- What
+		- Where 
+		- Why 
+		- Which code/
+			Code can be 
+				Added
+				Modify
+				Deleted 
+		----------------------------
+		Over a period of time. 
+		---------------------------
+	
+
+
+Other tools - 
+======================================
+RCS -> CVS -> SVN -> Git
+VSS -> ClearCase - Perforce - Mercury - TFS
+
+Who is going to install it?
+========================================
+ANYONE
+
+How to install git?
+===================================
+	Windows
+		EXE	- git-scm.com
+		Command
+			- git bash - Basic Linux command you can run using git bash in Windows.
+			- git cmd
+
+	Mac	
+		EXE	- git-scm.com	
+		Command
+
+	Linux
+		EXE	- git-scm.com
+		Command
+			UB - apt-get install git
+			RHEL - yum install git
+
+
+How git works!!!! Git Architecutre?
+===============================================
+
+	===========================
+	GIT IS BASED ON DISTRIBUTED MODEL
+	===========================
+SERVER-CLIENT				DISTRIBUTED MODEL
+
+================================================
+Basic Workflow in Git
+=================================
+Step 1 - Create a repo
+$ git init
+
+Step 2 - Write a Code?
+
+Step 3 - Add this code to gitrepo*[Working dir to Staging area]
+$ git add filename
+
+[ ONE TIME ]]
+$ git config user.name "Rajesh Kumar"
+$ git config user.email "devops@Rajeshkumar.xyz"
+
+Step 4 - Commit this code to gitrepo* [Staging to repo]
+git commit -m"adding" 
+
+Step 5 - See what i commited in the past
+$ git log
+commit 3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f (HEAD -> master)
+Author: Rajesh Kumar <devops@rajeshkumar.xyz>
+Date:   Sat Jul 18 10:46:05 2020 +0530
+
+    adding
+
+$ git show 3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f
+commit 3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f (HEAD -> master)
+Author: Rajesh Kumar <devops@rajeshkumar.xyz>
+Date:   Sat Jul 18 10:46:05 2020 +0530
+
+    adding
+
+diff --git a/file1.txt b/file1.txt
+new file mode 100644
+index 0000000..e69de29
+--------------------------
+3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f 
+
+1 2 3 4 5 6 - NEVER
+Git store your changes in a OBJECT
+			 -------------------
+			 identified by SHA1 HASH  40 Char "3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f"
+			 By SHA1 AKA Checksum Aka CommitID
+================================
+REPOSTIORY = .git/
 
 
 
+Advance Workflow in Git == Working with Repote
+=================================
+Step 1 - Create a repo in Github
+
+Step 2 - First USER	
+	git push url master
+
+Step 3 - ANOTHER USER - git clone url
+
+Step 4 - ANOTHER USER - git clone url
+	git add .
+	git commit -m"commit"
+	git push origin master
+Step 5 - First USER
+	git remote add origin url
+	git pull origin master
+
+
+GUI Tool 
+	- SourceTree
+	- Tortise GIT
+
+	- Visual Studio Code
+	- Eclipse
+	- VS
+	- Jetbrain
+
+Github	SERVER
+	Cloud
+	Enterprise
+Gitlab	SERVER
+	Cloud
+	Enterprise
+Bitbucket SERVER
+	Cloud
+	Enterprise
+Gerrit	SERVER
+	FREE by Google
+
+10+++++++
+
+QA Session
+==============
+
+What is BRANCH
+-----------------------
+is a Seprate line of code for 
+		Bug fixing
+		Feature
+		Branching is FREEE ------
+
+What is HEAD?
+--------------------------
+HEAD IS A TIP OF THE CURRENT BRANCH
+          ---
+	  NOT TOP
+
+MASTER 
+BRANCHING and Merging = 3-4 hours
+--------------------------------
+Undoing
+-----------------
+
+
+Code Review
+=================================
+gitlab
+github
+gerrit
+
+
+How git works!!
+==========================
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+https://www.devopsschool.com/slides/git/how-git-works/index.html
+====================================================
+Tutortials
+Videos
+Slides
+===============================
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+DevOpsSchool - YOUTUBE
+===========================================================
+2.10 PM IST
+=====================
+Nexus
+=========================================================
+=========================================================
+What is Nexus?
+	its a Registry or Repository Manager
+		 Contains multiple Repository.
+	For what?
+		For Binary storage
+			Executable
+			Images
+			PDFs
+			Words
+			XLSs
+			Classfile
+	For Package Versioning
+	Developed in Java
+		- Platform
+	From SonaType
+	Release
+		OSS - Free for Community
+		Professional - Paid for Enterprise
+			Trial - 15 days
+
+What kind of Repository?
+https://help.sonatype.com/repomanager3/formats
+
+Why Nexus?
+============================
+	Upload My Package
+	Download other Package
+
+	We have multiple format of Package
+	We have multiple tools who generate these and 
+			Nexus undertand multiple tools.
+
+	For Storing all kinds of Artifact for ORG At ONE PLACE
+
+	For Security 
+		Limited Upload Access
+		All Download
+
+	For Durability of Package
+
+	It enforces process
+
+	Authentication
+		USER ID n PAssword
+		LDAP
+		AD
+
+	Authrozation = 
+		Role based access
+
+	Admin work
+		Backup
+		Cleanup
+
+Other tools - Artifactory - Archiva
+=======================================================
+
+How Nexus works!!
+=====================================
+ Nexus Web (8081)
+		META ----> RDBMS
+		FILES ---> OBJECT managed by Java
+======================================
+
+How to install it?
+==================================
+13.232.167.87
+
+http://13.232.167.87:8081/
+admin
+admin123
+============================================
+Workflow in Nexus?
+===========================================
+------------------------ADMIN--------------------
+Step 1 - Setup your Nexus Authentication
+- USER and PASSWORD[Default]
+- LDAP or Realms
+
+Step 2 - Setup a Notification
+		SMTP server
+
+Step 3 - Create list of required Priv**
+
+Step 4 - Creete a role
+
+Step 5 - Create a user and add into role.
+deploy
+deploy123
+------------------------DevOps--------------------
+Step 6 - First Choose your Package - Maven
+
+Step 7 - Create a repo.
+	
+	TYPE OF RELEASE IN MAVEN
+	- RELEASE	2.0,2.1.0			== STABLE
+	- SNAPSHOT	2.0-SNAPSHOT,2.1.0-SNAPSHOT 	== NOT STABLE
+
+	TYPES OF REPO in NEXUS
+	- Hosted - READ - WRITE && Hosted in Local Nexus Server only.
+			Release	 = rajesh-release-hosted
+			http://13.232.167.87:8081/repository/rajesh-release-hosted/	
+			Snapshot = rajesh-snapshot-hosted
+			http://13.232.167.87:8081/repository/rajesh-snapshot-hosted/
+
+	- Proxy - READ ONLY CACHE COPY OF remote hosted.
+		rajesh-proxy-central
+		http://13.232.167.87:8081/repository/rajesh-proxy-central/
+	- Group - a Collection of Hosted and Proxy repo.
+		rajesh-group
+		http://13.232.167.87:8081/repository/rajesh-group/
+	
+
+How to learn Maven?
+======================
+https://www.devopsschool.com/videos/show/maven?type=video
+======================================================================
+Upload & Download BUT using MAVEN!!!!
+===========================================================
+How to Upload My Package to Repo?
+======================================
+
+Step1 - Create your Project [ONE TIME ]
+
+$ cd /c/
+
+$ mvn archetype:generate -DgroupId=com.devopsschool.software -DartifactId=chat -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+$ mvn archetype:generate -DgroupId=com.devopsschool.software -DartifactId=mail -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Step2 - Update pom.xml with a repo where you want to upload.
+
+<distributionManagement>
+	<repository>
+		<id>broad</id>
+		<name>Internal Releases</name>
+		<url>http://13.232.167.87:8081/repository/rajesh-release-hosted/</url>
+	</repository>
+ 
+	<snapshotRepository>
+		<id>broad</id>
+		<name>Internal Releases</name>
+		<url>http://13.232.167.87:8081/repository/rajesh-snapshot-hosted/</url>
+	</snapshotRepository>
+
+</distributionManagement>
+
+
+Step3 - Update setting.xml with a acess of Repo.
+
+<server>
+		<id>broad</id>
+		<username>deploy</username>
+		<password>deploy123</password>
+</server>
+
+setting.xml = C:\tools\maven\conf
+
+Step4 - Make sure a element ID of pom.xml of repo and element ID of setting.xml for MUST match.
+
+Step5 - mvn deploy
+
+
+Refer Project - https://github.com/devops-school/helloworld-java-maven
+===================================
+How to instal Maven?
+=================================
+Step 1- Install JDK 8
+
+Step 2 - Set JAVA_HOME env var
+or
+set JAVA_HOME=C:\your\path\here\
+
+
+Step 3 - Download a Maven package http://apachemirror.wuchna.com/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip
+& Extract it in c:/tools/maven
+
+Step 4 - Add "c:/tools/maven/bin/" int PATH env var.
+or
+set PATH=%PATH%;c:/tools/maven/bin/
+
+Step 5 - mvn --version
+=========================================================
+How to download Packages from Nexus using Maven?
+====================================================
+
+
+Maven --> Pom.xml (Dependencies) --> LocalRepo(C:\Users\Rajesh Kumar\.m2\repository)
+					IF there - Load in JVM 
+					IF not there - Go to Central https://repo.maven.apache.org/maven2/
+					and Download back to Local and Use it.
+
+
+How can i tell Maven to read dependncies from nexus than Central?
+
+=====================================================
+Setting.xml Modify Mirror element.
+===============================================================
+
+Rajesh Kumar
+DevOps@RajeshKumar.xyz
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
 
 
 
