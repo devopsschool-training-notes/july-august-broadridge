@@ -1,0 +1,172 @@
+Rajesh Kumar
+========================
+1 2 3 4 5 6 7 8 9 
+================================
+9: 30 AM IST - 6: 00 PM IST
+================================
+2 Break - 15 mins - Tea coffer - 11.30 / 4:00
+1 Break - 45mins-50mins = 1:OO - 
+=====================================
+Demo Env - Laptop + AWS Cloud
+Lab - Laptop + AWS Cloud
+
+Git  	1/2 Half
+& 
+Nexus	1/2 Half
+========================================================
+Quick Fact about requirement
+- Git - NO Pre
+- Nexus - Some Pre
+		Maven
+		Gradle
+		Docker
+=========================DEVOPS===============================
+What is Git?
+--------------------------
+	Code Repository
+	Version control system
+	Source Code Management System
+	For What????
+		Storing TEXT BASED Code
+	Not For Binary
+		Executable
+		Images
+		PDFs
+		Words
+		XLSs
+		-------------------------
+		NEXUS
+
+	Free
+	Open Source
+	Written By - Linus Tovarld
+
+	Platform Independent
+
+	===========================
+	GIT IS BASED ON DISTRIBUTED MODEL
+	===========================
+ 
+===================================
+
+Why we need Git?
+------------------------------
+	Coz We want to know
+		- When
+		- WHO 
+		- What
+		- Where 
+		- Why 
+		- Which code/
+			Code can be 
+				Added
+				Modify
+				Deleted 
+		----------------------------
+		Over a period of time. 
+		---------------------------
+	
+
+
+Other tools - 
+======================================
+RCS -> CVS -> SVN -> Git
+VSS -> ClearCase - Perforce - Mercury - TFS
+
+Who is going to install it?
+========================================
+ANYONE
+
+How to install git?
+===================================
+	Windows
+		EXE	- git-scm.com
+		Command
+			- git bash - Basic Linux command you can run using git bash in Windows.
+			- git cmd
+
+	Mac	
+		EXE	- git-scm.com	
+		Command
+
+	Linux
+		EXE	- git-scm.com
+		Command
+			UB - apt-get install git
+			RHEL - yum install git
+
+
+How git works!!!! Git Architecutre?
+===============================================
+
+	===========================
+	GIT IS BASED ON DISTRIBUTED MODEL
+	===========================
+SERVER-CLIENT				DISTRIBUTED MODEL
+
+================================================
+Basic Workflow in Git
+=================================
+Step 1 - Create a repo
+$ git init
+
+Step 2 - Write a Code?
+
+Step 3 - Add this code to gitrepo*[Working dir to Staging area]
+$ git add filename
+
+[ ONE TIME ]]
+$ git config user.name "Rajesh Kumar"
+$ git config user.email "devops@Rajeshkumar.xyz"
+
+Step 4 - Commit this code to gitrepo* [Staging to repo]
+git commit -m"adding" 
+
+Step 5 - See what i commited in the past
+$ git log
+commit 3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f (HEAD -> master)
+Author: Rajesh Kumar <devops@rajeshkumar.xyz>
+Date:   Sat Jul 18 10:46:05 2020 +0530
+
+    adding
+
+$ git show 3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f
+commit 3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f (HEAD -> master)
+Author: Rajesh Kumar <devops@rajeshkumar.xyz>
+Date:   Sat Jul 18 10:46:05 2020 +0530
+
+    adding
+
+diff --git a/file1.txt b/file1.txt
+new file mode 100644
+index 0000000..e69de29
+--------------------------
+3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f 
+
+1 2 3 4 5 6 - NEVER
+Git store your changes in a OBJECT
+			 -------------------
+			 identified by SHA1 HASH  40 Char "3455d6f1c02aa17a97d2a7dc36cf5d22b68f811f"
+			 By SHA1 AKA Checksum Aka CommitID
+================================
+REPOSTIORY = .git/
+
+
+QA Session
+==============
+HEAD
+MASTER 
+
+Advance Workflow in Git
+=================================
+
+
+
+
+
+
+
+
+
+
+		
