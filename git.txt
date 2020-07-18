@@ -152,13 +152,100 @@ Git store your changes in a OBJECT
 REPOSTIORY = .git/
 
 
+
+Advance Workflow in Git == Working with Repote
+=================================
+Step 1 - Create a repo in Github
+
+Step 2 - First USER	
+	git push url master
+
+Step 3 - ANOTHER USER - git clone url
+
+Step 4 - ANOTHER USER - git clone url
+	git add .
+	git commit -m"commit"
+	git push origin master
+Step 5 - First USER
+	git remote add origin url
+	git pull origin master
+
+
+GUI Tool 
+	- SourceTree
+	- Tortise GIT
+
+	- Visual Studio Code
+	- Eclipse
+	- VS
+	- Jetbrain
+
+Github	SERVER
+	Cloud
+	Enterprise
+Gitlab	SERVER
+	Cloud
+	Enterprise
+Bitbucket SERVER
+	Cloud
+	Enterprise
+Gerrit	SERVER
+	FREE by Google
+
+10+++++++
+
 QA Session
 ==============
-HEAD
-MASTER 
 
-Advance Workflow in Git
+What is BRANCH
+-----------------------
+is a Seprate line of code for 
+		Bug fixing
+		Feature
+		Branching is FREEE ------
+
+What is HEAD?
+--------------------------
+HEAD IS A TIP OF THE CURRENT BRANCH
+          ---
+	  NOT TOP
+
+MASTER 
+BRANCHING and Merging = 3-4 hours
+--------------------------------
+Undoing
+-----------------
+
+
+Code Review
 =================================
+gitlab
+github
+gerrit
+
+
+How git works!!
+==========================
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+https://www.devopsschool.com/slides/git/how-git-works/index.html
+====================================================
+Tutortials
+Videos
+Slides
+===============================
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+DevOpsSchool - YOUTUBE
+===========================================================
+
+
+
+
+
+
+
+
+
+
 
 
 
