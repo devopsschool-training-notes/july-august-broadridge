@@ -140,8 +140,48 @@ Maven ---
 hourly
 
 rajesh@scmgalaxy.com
+=============================================================================
+https://www.devopsschool.com/blog/how-to-schedule-and-trigger-a-jenkins-job-automatically/
+=============================================================================
+Scheduling 
+======================
+Trigger a Job but at certain time = Build periodically
+
+Trigger a Job but at certain time && SCM changes = Poll SCM
+
+Trigger a Job when another job is finished = Build after other projects are built
+
+Trigger a Job trough script or remote = Trigger builds remotely (e.g., from scripts)
+
+Trigger a job when there is push in Github? = GitHub hook trigger for GITScm polling
+
+Trigger a job by Another Job = Build other projects "under post build actions"
 
 
+Trigger a Job trough script or remote = Trigger builds remotely (e.g., from scripts)
+===========================================================================================	
+Use the following URL to trigger build remotely: JENKINS_URL/job/script/build?token=TOKEN_NAME or /buildWithParameters?token=TOKEN_NAME
+Optionally append &cause=Cause+Text to provide text that will be included in the recorded build cause.
 
+http://13.235.42.93:8080/job/script/configure
+
+wget or curl
+http://13.235.42.93:8080/job/script/build?token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+
+
+JENKINS_URL/job/script//buildWithParameters?token=TOKEN_NAME
+
+curl –user admin1:91367cf0389eaf89669f74c9963c9fb3 http://54.171.140.1:8080/job/ANT-BUILD/build?token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+
+curl --user devops:1114665fffab9795752464f997f520b98c http://13.235.42.93:8080/job/script/build?token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+
+Trigger a job when there is push in Github? = GitHub hook trigger for GITScm polling
+==================================================================================
+https://www.devopsschool.com/blog/how-to-build-when-a-change-is-pushed-to-github-in-jenkins/
+
+cd3be34f5d874e82853561784676c2b28a7938e3 
+
+
+http://13.235.42.93:8080/github-webhook/
 
 
