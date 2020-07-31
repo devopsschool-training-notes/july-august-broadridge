@@ -43,9 +43,9 @@ SonarQube -> Maven -> Junit -> Jar -> Nexus -> Ansible -> Selenium -> Jacoco
 -------------------------------------------------------------------------
 				Jenkins
 					Imm Feedback
-					Scheduling 
+					Scheduling 		DONE
 					Dashboarding
-					Integration
+					Integration		TOOLS - JOBS - DONE
 					distributed build node
 
 Other tools
@@ -183,5 +183,66 @@ cd3be34f5d874e82853561784676c2b28a7938e3
 
 
 http://13.235.42.93:8080/github-webhook/
+==========================================================================
+==========================================================================
+How can we integrate jenkins with other tools?
 
+
+Analysis -> Build -> UT -> Pack -> Archive -> Deploy2QA -> AT -> CC
+====================================================================
+SonarQube -> Maven -> Junit -> Jar -> Nexus -> Ansible -> Selenium -> Jacoco
+========================================================================
+				CI
+-------------------------------------------------------------------------
+				Jenkins
+
+13.233.127.211
+https://www.devopsschool.com/tutorial/docker/install-config/docker-install-commuityedition-centos-rhel.html
+
+
+JIRA
+http://13.233.127.211:8080/
+devops
+devops123
+
+SONARQUBE Server
+http://13.233.127.211:9000
+admin
+admin
+SONARQUBE Scanner
+SONARQUBE SRC code https://github.com/devopsschool-demo-labs-projects/java-sonarqube-helloworld-src
+
+
+NEXUS
+http://13.233.127.211:8081/nexus/
+admin
+admin123
+
+====================================
+Rule for Intgrating any tools with Jenkins
+- Install a Tools plugins
+- Config a tool plugins
+- use a plugins in job config.
+
+
+Job Management
+========================
+List
+	Folder1
+	Folder2
+	Folder3
+=============
+Req 1  - Jira ID is part of Git commit .
+		= git hooks or github web hooks
+Req 2  - If git commit has valid jira id then build should trigger.
+		Option 1 - GitHub Jira Validator SCM Filter
+		Option 2 - 
+
+http://13.233.127.211:8081/nexus/content/repositories/broadall/
+
+   <server>
+		<id>sym</id>
+		<username>admin</username>
+		<password>admin123</password>
+</server>
 
