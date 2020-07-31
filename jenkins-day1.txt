@@ -1,0 +1,147 @@
+Lunch Time - 1:00 - 2:00 PM
+Break time - 11:30 for 15 mins
+Break time - 3:30 for 15 mins.
+=========================================
++91 8105843520
+=========================================
+
+
+What is Jenkins?
+=========================
+	CI tool
+	Release
+	- Jenkins 
+		Free and Open Source
+	- Jenkins Enterprise
+		Paid
+	- BlueOcean
+		Free but pipeline
+	- Jenkins X
+		Free but containers.
+	Written in JAVA
+		require JVM
+		All Platform
+	Powered by Plugins concept 
+		Core Plugins
+		Community Plugins
+	Earlier name was Hudson
+
+
+What is CI tool?
+=========================
+	Cont Integ
+
+Automated Build --> Auto Testing
+================================
+	   Imm Feedback
+
+Analysis -> Build -> UT -> Pack -> Archive -> Deploy2QA -> AT -> CC
+====================================================================
+SonarQube -> Maven -> Junit -> Jar -> Nexus -> Ansible -> Selenium -> Jacoco
+========================================================================
+				CI
+-------------------------------------------------------------------------
+				Jenkins
+					Imm Feedback
+					Scheduling 
+					Dashboarding
+					Integration
+					distributed build node
+
+Other tools
+https://www.devopsschool.com/top10tools/
+https://www.devopsschool.com/blog/top-10-continuous-integration-tool/
+
+
+jenkins Architecture
+-----------------------------
+jenkins
+	Jenkins Dashboard			8080(Default)
+		- We config jobs
+	Jenkins Nodes
+		- Jobs is being executed
+	- 1 Node Defaullt [Same Server]
+	- Can be add more using ip/access.
+https://www.devopsschool.com/blog/jenkins-architecture-explained/
+
+========================================
+========================================
+How to install jenkins?
+========================================
+- Centos 7
+	- JDK
+- Install jenkins
+https://www.devopsschool.com/tutorial/jenkins/jenkins-installation-and-configuration.html
+
+13.235.42.93
+centos
+
+yum install java-1.8.0-openjdk-devel
+
+    1  clear
+    2  yum install java-1.8.0-openjdk-devel
+    3  clear
+    4  ls
+    5  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    6  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    7  yum install wget -y
+    8  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    9  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   10  yum install jenkins
+   11  systemctl start jenkins
+   12  ps -eaf | grep -i jenkins
+   13  clear
+   14  history
+
+
+http://13.235.42.93:8080/
+devops
+devops123
+
+What is JOB?
+=======================================
+Collection of Phases | Section
+	General
+	SCM
+	Build Triggers
+	Build env
+	Build
+		Step1
+		Step2
+		Step3
+		Step4
+	Post Build
+
+
+=================================================
+Basic Workflow to Setup a Jenkins JOB?
+===========================================
+Secret formula to setup a jenkins job?
+-----------------------------------------
+1. What is my Technology? ie. JAVA DOT NET 		JAVA
+	- Compiler or Interpreter
+2. Where is Source Code?git svn p4			GITHUB
+	- Access | Branch
+3. What is your builder? maven - ant
+
+4. When do you want to tigger this job?
+			hourly
+5. where you want to deliverd a feedback
+			rajesh@scmgalaxy.com
+
+JAVA
+
+GITHUB
+https://github.com/devops-school/helloworld-java-maven
+
+Builder 
+Maven ---
+
+hourly
+
+rajesh@scmgalaxy.com
+
+
+
+
+
