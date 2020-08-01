@@ -31,6 +31,43 @@ https://www.jenkins.io/doc/book/pipeline/
 
 https://github.com/devops-school/helloworld-java-maven
 https://github.com/devopsschool-sample-programs/jenkins-groovy-scripts-collection
+======================================
+Other feature of Jenkins job
+=================================
+Discard old builds
+
+This project is parameterised
+
+Delete workspace before build starts
+
+Abort the build if it's stuck
+
+Add timestamps to the Console Output
+
+Ant 
+https://github.com/scmgalaxy/helloworld-java-ant
+
+Gradle 
+https://github.com/devopsschool-demo-labs-projects/gradle-hello-world-Jenkinsfile
 
 
-https://hooks.slack.com/services/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
+conditional Step
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
