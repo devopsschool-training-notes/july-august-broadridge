@@ -52,16 +52,40 @@ https://github.com/devopsschool-demo-labs-projects/gradle-hello-world-Jenkinsfil
 
 
 conditional Step
+===============================================================
+===============================================================
+
+===============================================================
+			1 NODE
+JOB 1- 1 Hour -- Hourly - 24 Builds - 24 Hours
+------------------------------------------------
+JOB 2  1 Hour -- Hourly - 24 Builds
+JOB 3  1 Hour -- Hourly - 24 Builds 
+==============
+executors
+==================================================================
+Current Jobs
+
+=============================================
+Adding A Node
+======================
+Linux
+/tmp/jenkins
+15.207.16.222
+centos
+key
+
+Windows
+E:\jen
+
+Cloud 
+Container
 
 
+java -jar agent.jar -jnlpUrl http://13.235.42.93:8080/computer/windows/slave-agent.jnlp -secret 1a510eac6037a0d240fa12b1b518f9c700f2502f43886e9ffec703ca314a3b3c -workDir "E:\jen"
 
 
-
-
-
-
-
-
+http://13.233.173.255:8080/computer/windows/
 
 
 
