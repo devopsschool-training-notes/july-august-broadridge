@@ -1,0 +1,36 @@
+Imm Feedback
+Dashboarding = Pipeline
+Other Jobs Spec
+distributed build node
+=======================================================
+Imm Feedback
+====================================================
+Email
+	Email Extension Plugin
+	Mailer Plugin
+=============================
+Jenkins can not send an email
+=============================
+
+
+
+
+
+Chat
+	jabbar
+	slack		- Web based
+	cisco communicator
+
+Dashboarding
+	Build Pipeline	- You  need a job - inter-connected
+	Pipeline - You need a Script	[ Recommended ]
+	
+
+Jenkins Cli
+https://www.jenkins.io/doc/book/pipeline/
+
+https://github.com/devops-school/helloworld-java-maven
+https://github.com/devopsschool-sample-programs/jenkins-groovy-scripts-collection
+
+
+https://hooks.slack.com/services/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
