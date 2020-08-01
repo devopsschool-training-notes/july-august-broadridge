@@ -88,10 +88,25 @@ java -jar agent.jar -jnlpUrl http://13.235.42.93:8080/computer/windows/slave-age
 http://13.233.173.255:8080/computer/windows/
 
 
+=========================================================================
+=========================================================================
+Authentication and Authorization
+====================================
+Authentication
+	Who can login jenkins
+ 	Delegate to servlet container	
+ 	Jenkins’ own user database	
+ 		Allow users to sign up	
+ 	LDAP	
+ 	Unix user/group database	
+ 	None
+Authorization
+	What are allowed to do?
 
 
+java -jar jenkins-cli.jar -s http://13.233.173.255:8080/ -webSocket help
 
+java -jar jenkins-cli.jar -s http://13.233.173.255:8080/ -auth devops:1138b04f0b52cfd12d2af80e77499c7a65 -webSocket delete-job ant  
 
-
-
+Backup and restore
 
