@@ -337,15 +337,239 @@ Contrl + p + q
 
 
 
+https://www.devopsschool.com/tutorial/docker/commands/
 
 How to debug a container
+==============================
 
-==============================\
+ 91  docker inspect 8f8e08634392
+   92  clear
+   93  ls
+   94  docker ps
+   95  docker attach 8f8e08634392
+   96  clear
+   97  ls
+   98  docker ps
+   99  docker logs 1d33bbf13120
+  100  clear
+  101  ls
+  102  docker ps
+  103  docker attach 1d33bbf13120
+  104  clear
+  105  ls
+  106  docker stats
+  107  docker stats b34558311aa9
+  108  docker ps
+  109  docker top b34558311aa9
+  110  clear
+  111  ls
+  112  docker events
+  113  history
+
+What is an Docker image
+==========================
+
+ 112  docker events
+  113  history
+  114  clear
+  115  docker ps
+  116  docker stop $(docker ps -a -q)
+  117  docker rm $(docker ps -a -q)
+  118  clear
+  119  ls
+  120  docker images
+  121  docker rm $(docker images -q)
+  122  docker rmi $(docker images -q)
+  123  clear
+  124  docker images
+  125  docker ps -a
+  126  docker rmi $(docker images -q)
+  127  docker rmi jenkins
+  128  docker rmi jenkins:2.60.3
+  129  clear
+  130  ls
+  131  docker images
+  132  docker info
+  133  clear
+  134  cd /var/lib/docker
+  135  ls
+  136  cd overlay2
+  137  pwd
+  138  ls
+  139  du -sh
+  140  docker pull ubuntu
+  141  cleare
+  142  clear
+  143  ls
+  144  docker images
+  145  docker inspect ubuntu
+  146  clear
+  147  docker images
+  148  docker history ubuntu
+  149  clear
+  150  ls
+  151  du -h --max-depth=1
+  152  cd ./00e3c353b8f46e7cfb71798d438b6dac7aabe441a5d2bbf2e667f0875a597f1d
+  153  clear
+  154  ls
+  155  cd diff/
+  156  ls
+  157  clear
+  158  ls
+  159  pwd
+  160  cd ..
+  161  ls
+  162  cd ..
+  163  ls
+  164  clear
+  165  ls
+  166  docker run -itd ubuntu
+  167  ls
+  168  du -sh 1aa16318441e02b70d10e5180fc9a3cf6dc39997c8c2deec9684c6fae381371e-init
+  169  du -sh 1aa16318441e02b70d10e5180fc9a3cf6dc39997c8c2deec9684c6fae381371e
+  170  clear
+  171  ls
+  172  df -kh
+  173  docker run -itd ubuntu
+  174  df -kh
+  175  clear
+  176  ls
+  177  df -kh
+
 How to dev an image
 ===============================
+1. using Existing an container - docker commit - Manual Process
+-----------------------------------------------
+Image
+	ubunut
+	git
+	copy some app files
+	set env
+
+171  ls
+  172  df -kh
+  173  docker run -itd ubuntu
+  174  df -kh
+  175  clear
+  176  ls
+  177  df -kh
+  178  history
+  179  clear
+  180  df -kh
+  181  ls
+  182  docker ps
+  183  clear
+  184  docker ps
+  185  docker stop d32ffee26df1 100ceb3e0f53
+  186  df -kh
+  187  docker start d32ffee26df1 100ceb3e0f53
+  188  df -kh
+  189  clear
+  190  ls
+  191  clear
+  192  docker ps
+  193  docker attach d32ffee26df1
+  194  lks
+  195  ls
+  196  cd
+  197  ls
+  198  clear
+  199  ls
+  200  vi devopsschool.html
+  201  docker ps
+  202  docker cp devopsschool.html d32ffee26df1:/tmp
+  203  docker attach d32ffee26df1
+  204  clear
+  205  ls
+  206  docker ps
+  207  docker exec d32ffee26df1 git
+  208  clear
+  209  ls
+  210  docker ps
+  211  docker exec 100ceb3e0f53 git
+  212  docker commit -m"up-up-git-file" d32ffee26df1 up-up-git-file
+  213  docker images
+  214  docker history ubuntu
+  215  docker history up-up-git-file
+  216  docker run -itd up-up-git-file
+  217  docker ps
+  218  docker exec 2a81da9fdd34 git
+  219  clear
+  220  ls
+  221  history
+
+	
+
+2. using dockerfile  - docker build - automated process
+
+FROM ubuntu
+MAINTAINER Rajesh Kumar DevOps@Rajeshkumar.xyz
+RUN apt-get update
+RUN apt-get install git -y
+COPY devopsschool.html /tmp/
+ENV RAJA_HOME RRRRR
+
+  227  vi docekrfile
+  228  docker build -t ffff .
+  229  docker build -t -f docekrfile ffff .
+  230  docker build -f docekrfile -t ffff .
+  231  clear
+  232  docker images
+  233  docker run -itd ffff
+
+https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile
+
 
 How to share an Image?
 ===============================
+- tarball
+
+ 246  ls
+  247  docker ps -a
+  248  docker images
+  249  docker save -o ffff.tar ffff
+  250  ls
+  251  clear
+  252  ls
+  253  docker images
+  254  docker rmi fff
+  255  docker rmi ffff
+  256  cleare
+  257  clear
+  258  docker images
+  259  docker load -i ffff.tar
+  260  docker images
+  261  history
+
+
+- hub.docker.com
+
+
+
+ 263  ls
+  264  docker images
+  265  clear
+  266  docker login
+  267  docker login
+  268  docker login
+  269  clear
+  270  docker login
+  271  docker images
+  272  docker push ffff
+  273  clear
+  274  docker images
+  275  docker tag ffff devopsschools/broadfri
+  276  docker images
+  277  docker push devopsschools/broadfri
+  278  clear
+
+
+
+
+
+
+
+
 
 Orch
 	Kuber - 3-4 days
