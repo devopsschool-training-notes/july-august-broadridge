@@ -1,0 +1,378 @@
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+What is Docker?
+==========================
+	Container Mgmt tool/Platform
+	Release
+		CE - Community Ed
+			Open Source
+			Free
+		EE - Enterprise Ed
+			Paid
+		https://www.devopsschool.com/blog/what-is-docker-enterprise-3-0-detailed-exaplanations/
+		https://www.devopsschool.com/blog/difference-between-docker-community-edition-ce-vs-docker-enterprise-edition-ee-in-2020/
+		https://www.devopsschool.com/blog/upgrade-and-install-guide-docker-engine-community-to-docker-engine-enterprise/
+
+	Written in Go
+	by Soloman hykes
+	First 2014
+	
+	
+	
+What is tool?
+	Saving cost
+	Saving time
+	Imp Eff*
+	-------------------------
+		RUNNING APPs.
+
+What is Container?
+--------------------------------
+	Lightweight standalone complete and independent env for runing app.
+	USer NS
+		with 
+			1 MNT NS
+			1 PID nS
+			1 NET NS
+			--------------------
+			Get CPU and RAM Allocation from CRGOUP]
+			ROOT and NON ROOT access control capabilties
+
+How do we run any apps?
+================================
+Hardware --> OS --> JDK --> TOMCAT -> APP
+		    ---------------------
+			    APP
+
+What is there in OS which allow APP to run?
+=============================================
+OS -> KERNAL
+		LIB(Namespace)
+				USER	- Multiple
+				PID	- 1			SHARED		
+				MOUNT	- 1 (Filesystem)	SHARED				
+				NET	- 1			SHARED		
+
+		CGROUPS	
+				CPU + RAM + IO mgmt to PID
+
+		Capabilties
+				ROOT & NOT ROOT USRS
+=============================================
+==============================================================================================
+30 YEARS			15 YEARS			NOW
+==============================================================================================
+PHYSCIAL	--INTERNET--     Virtual			Container	
+DESKTOP
+PERSONAL COM	
+-------
+HUMAN
+================================================================
+Other Container interface 
+https://www.devopsschool.com/blog/list-of-top-container-runtime-interface-projects/
+
+How to install Docker?
+13.233.216.244
+centos
+https://www.devopsschool.com/tutorial/docker/install-config/docker-install-commuityedition-centos-rhel.html
+==================================
+DOCKER COMMANDS NEED ROOT ACCESS OR SUDO OR A USER NEED TO BE IN A GROUP CALLED "docker"
+=====================================
+
+Docker Architecture
+============================
+Human --> Docker Client -----------REST---------> Docker Deamon --> ContainerD -> Kernal
+          -----------------------------------------------------
+				Docker Engine
+ 14  which docker
+   15  ps -eaf | grep docker
+   16  which containerd
+
+Components of Dockers?
+------------------------------------
+1. Docker Engine
+
+2. Docker Image
+-------------------------
+	rootfs  -> userfs + appfs
+	is a group of filesystems which container
+			base os rootfs and apps file and usrfs
+	What you have in image, it get mounted one copy of it INTO container USER NS
+
+filesystems
+	bootfs   ---> rootfs  -> userfs + appfs + appfs
+	kernal   ---> OS FS
+	cgroup
+	capa
+filesystems Driver 
+	NTFS
+	FAT
+	OVERLAY
+	AUFS
+	DEVICEMAPPER
+	=================================
+	ubuntu - Base image aka rootfs
+	jenkins == ubuntu + jdk + jenkins
+		   ------------------------
+	mysql == base(centos) -> mysql --
+				LICENCE
+
+3. Docker Registry
+	is a collection of Repository
+		Respository has Image
+
+	PUBLIC
+		hub.docker.com
+		google registry
+
+	PRIVATE
+		artifactory
+		nexus
+		ecr
+		azure repos
+
+4. Docker Container
+	A moment you RUN image, it create one USER NS
+					Attached with MOUNT from Image
+					+
+					Attached ONE PID NS
+					ATTACHED one NET NS
+
+
+Workflow of Docker?
+==========================================
+
+
+
+LifeCycle of Container
+=========================================================
+Create -> Start -> Stop -> Start -> Restart -> Pause -> Unpuase -> Kill - Remove
+
+RUN
+================
+PULL + Create + Start + BECOME(Attached to container)
+
+RUN -d
+================
+PULL + Create + Start + DO NOT BECOME(Attached to container)
+
+ 3  docker images
+    4  clear
+    5  docker images
+    6  docker pull jenkins
+    7  clear
+    8  docker images
+    9  docker ps
+   10  docker ps -a
+   11  docker create jenkins
+   12  docker ps
+   13  docker ps -a
+   14  clear
+   15  docker ps -a
+   16  docker start 87d3ecbf4c48
+   17  docker ps -a
+   18  docker stop 87d3ecbf4c48
+   19  docker ps -a
+   20  clear
+   21  docker start 87d3ecbf4c48
+   22  docker ps
+   23  docker ps
+   24  docker restart 87d3ecbf4c48
+   25  docker ps
+   26  clear
+   27  docker pause 87d3ecbf4c48
+   28  docker ps
+   29  docker stats
+   30  docker unpause 87d3ecbf4c48
+   31  docker stats
+   32  docker kill 87d3ecbf4c48
+   33  docker ps
+   34  docker ps -a
+   36  docker rm 87d3ecbf4c48
+   37  docker ps -a
+=============================================================
+Lets Prove it.
+
+What is Container?
+--------------------------------
+	Lightweight standalone complete and independent env for runing app.
+	USer NS
+		with 
+			1 MNT NS
+			1 PID nS
+			1 NET NS
+			--------------------
+			Get CPU and RAM Allocation from CRGOUP]
+			ROOT and NON ROOT access control capabilties
+
+   40  ps -eaf | grep docker
+   41  ps
+   42  clear
+   43  docker ps
+   44  docker exec 2c3fac6f0d65 df -kh
+   45  docker exec de4a64aaa9aa df -kh
+   46  clear
+   47  docker ps
+   48  docker exec 2c3fac6f0d65  touch /opt/devops1.txt
+   49  docker exec 2c3fac6f0d65  touch /tmp/devops1.txt
+   50  docker exec 2c3fac6f0d65 ls /tmp
+   51  docker exec de4a64aaa9aa touch /tmp/devops1.txt
+   52  docker exec de4a64aaa9aa touch /tmp/devops2.txt
+   53  docker exec de4a64aaa9aa ls /tmp
+   54  clear
+   55  docker ps
+   56  clear
+   57  docker ps
+   58  docker exec 2c3fac6f0d65 ps -eaf
+   59  docker exec de4a64aaa9aa ps -eaf
+   60  ps -eaf | grep /bin/tini
+   61  clear
+   62  docker ps
+   63  docker inspect 2c3fac6f0d65 | grep -i ip
+   64  docker inspect de4a64aaa9aa | grep -i ip
+   65  clear
+   66  docker ps
+   67  histoyr
+
+RULE OF PID 1
+===============================================================
+PM				VM 				Container
+---------------------------------------------------------------------------------
+is running 			is running 			is running
+as long as 			as long as			as long as
+PID 1 is running		PID 1 is running		PID 1 is running	
+
+PID 1 is SYSTEMD		PID 1 is SYSTEMD		PID 1 can be anything
+===============================================
+How to use a container? / PM / Vm
+===================================
+How to go inside container?
+- exec 
+	exec command would execute an excutable inside a container.
+		with -it and /bin/bash - You can go inside.	
+- attach 
+	would get attached to PID1
+
+How can i access from outside
+- http
+63  docker run -it  ubuntu
+   64  docker ps
+   65  history
+   66  clear
+   67  docker ps
+   68  docker attach aa49424c54a9
+   69  clear
+   70  docker ps
+   71  docker ps
+   72  docker inspect c7adc504a766 | grep -i ip
+   73  clear
+   74  curl http://172.17.0.3:8080
+   75  curl http://172.17.0.2:8080
+   76  clear
+   77  ls
+   78  docker run -d nginx
+   79  clear
+   80  docker ps
+   81  docker inspect 8f8e08634392 | grep -i ip
+   82  clear
+   83  curl http://172.17.0.5
+   84  clear
+   85  history
+
+
+docker run -d -p 8080:8080 jenkins
+docker run -d -p 8081:8080 jenkins
+http://13.233.216.244:8081/
+http://13.233.216.244:8080
+===============================================================
+--name
+	create
+	run
+
+docker run -d --name rajesh2 -p 8082:8080 jenkins
+====================================================================\
+
+
+13.234.76.31
+centos
+centos123
+sudo -s
+
+
+
+How can i exit a container Safely when you r on bash.
+=======================
+Contrl + p + q
+
+ 36  docker ps
+   37  dcoker exec 2c3fac6f0d65 ls
+   38  docker exec 2c3fac6f0d65 ls
+   39  clear
+   40  docker ps
+   41  docker exec -it 2c3fac6f0d65 /bin/bash
+   42  clear
+   43  docker ps
+   44  docker exec 2c3fac6f0d65 ps -eaf
+   45  docker attach 2c3fac6f0d65
+   46  clear
+   47  docker ps
+   48  docker ps -a
+   49  clear
+   50  docker run -d ubuntu
+   51  docker ps
+   52  docker run -d jenkins'
+   53  docker run -d jenkins
+   54  docker ps
+   55  clear
+   56  docker ps -a
+   57  history
+   58  clear
+   59  docker ps -a
+   60  docker run -it  ubuntu
+   61  docker ps
+   62  clear
+   63  docker run -it  ubuntu
+   64  docker ps
+   65  history
+
+
+
+
+
+How to debug a container
+
+==============================\
+How to dev an image
+===============================
+
+How to share an Image?
+===============================
+
+Orch
+	Kuber - 3-4 days
+	Swram
+	ECS
+================================
+On premise ---> 
+
+
+Cate 1 - 2 Hours
+
+Cate 2 - 1.5 hours
+
+Cate 3 - 1 hours
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
